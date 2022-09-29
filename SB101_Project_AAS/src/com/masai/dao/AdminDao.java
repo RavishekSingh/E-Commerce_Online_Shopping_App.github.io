@@ -8,4 +8,5 @@ public interface AdminDao {
 
 	public String registerAdmin2(Admin admin);
 
+
 }
