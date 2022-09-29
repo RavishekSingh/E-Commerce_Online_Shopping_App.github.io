@@ -7,7 +7,6 @@ public interface AdminDao {
 	public String registerAdmin(String name,String email,String password);
 
 	public String registerAdmin2(Admin admin);
-	
-	
+
 
 }
