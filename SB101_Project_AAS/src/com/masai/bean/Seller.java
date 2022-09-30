@@ -70,6 +70,9 @@ public class Seller {
 
 
 	
+<<<<<<< HEAD
+=======
 	
 	
+>>>>>>> main
 }
