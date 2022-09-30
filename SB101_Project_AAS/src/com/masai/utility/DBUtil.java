@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class DBUtil {
 
+<<<<<<< HEAD
 public static Connection provideConnection() {
 		
 		Connection conn=null;
@@ -22,11 +23,20 @@ public static Connection provideConnection() {
 		
 		try {
 			conn= DriverManager.getConnection(url,"root","ravishek@0578");
+=======
+
+	public static Connection provideConnection() {
+		Connection conn=null;
+		String url="jdbc:mysql://localhost:3306/web19sb101_db";
+		try {
+			conn=DriverManager.getConnection(url, "root", "ravishek@0578");
+>>>>>>> main
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+<<<<<<< HEAD
 		
 		
 		
@@ -34,4 +44,9 @@ public static Connection provideConnection() {
 		
 	}
 	
+=======
+		return conn;
+	}
+
+>>>>>>> main
 }

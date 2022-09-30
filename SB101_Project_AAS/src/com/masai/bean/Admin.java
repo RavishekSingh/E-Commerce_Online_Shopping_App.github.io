@@ -1,32 +1,30 @@
 package com.masai.bean;
 
-public class Seller {
+public class Admin {
 
-	private int sid;
+	private int adminid;
 	private String name;
 	private String email;
-	private String mobile;
 	private String password;
-	
-	public Seller() {
+
+	public Admin() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Seller(int sid, String name, String email, String mobile, String password) {
+	public Admin(int adminid, String name, String email, String password) {
 		super();
-		this.sid = sid;
+		this.adminid = adminid;
 		this.name = name;
 		this.email = email;
-		this.mobile = mobile;
 		this.password = password;
 	}
 
-	public int getSid() {
-		return sid;
+	public int getAdminid() {
+		return adminid;
 	}
 
-	public void setSid(int sid) {
-		this.sid = sid;
+	public void setAdminid(int adminid) {
+		this.adminid = adminid;
 	}
 
 	public String getName() {
@@ -45,14 +43,6 @@ public class Seller {
 		this.email = email;
 	}
 
-	public String getMobile() {
-		return mobile;
-	}
-
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-
 	public String getPassword() {
 		return password;
 	}
@@ -63,16 +53,7 @@ public class Seller {
 
 	@Override
 	public String toString() {
-		return "Seller [sid=" + sid + ", name=" + name + ", email=" + email + ", mobile=" + mobile + ", password="
-				+ password + "]";
+		return "Admin [adminid=" + adminid + ", name=" + name + ", email=" + email + ", password=" + password + "]";
 	}
 
-
-
-	
-<<<<<<< HEAD
-=======
-	
-	
->>>>>>> main
 }
