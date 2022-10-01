@@ -1,12 +1,16 @@
 package com.masai.dao;
 
-import com.masai.bean.Admin;
+import java.util.List;
+
+import com.masai.bean.Buyer;
+import com.masai.bean.Seller;
+import com.masai.exception.AuctionException;
 
 public interface AdminDao {
 
-	public String registerAdmin(String name,String email,String password);
+	public boolean loginAdmin(String name, String password) throws AuctionException;
 
-	public String registerAdmin2(Admin admin);
+	public List<Seller> getAllSellerDetails() throws AuctionException;
 
-
+	public List<Buyer> getAllBuyerDetails() throws AuctionException;
 }

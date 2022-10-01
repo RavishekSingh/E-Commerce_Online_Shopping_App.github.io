@@ -6,18 +6,32 @@ import java.sql.SQLException;
 
 public class DBUtil {
 
-
-	public static Connection provideConnection() {
+public static Connection provideConnection() {
+		
 		Connection conn=null;
-		String url="jdbc:mysql://localhost:3306/web19sb101_db";
+		
+		
 		try {
-			conn=DriverManager.getConnection(url, "root", "ravishek@0578");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		String url="jdbc:mysql://localhost:3306/web19_sb101db";
+		
+		try {
+			conn= DriverManager.getConnection(url,"root","ravishek@0578");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+		
+		
+		
 		return conn;
+		
 	}
-
+	
 }

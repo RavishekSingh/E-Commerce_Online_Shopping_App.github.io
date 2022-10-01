@@ -6,9 +6,14 @@ public class Demo {
 
 	public static void main(String[] args) {
 
-		Connection conn = DBUtil.provideConnection();
+			Connection conn= DBUtil.provideConnection();
+			
+			
+			System.out.println(conn);
+			
+			
+		
 
-		System.out.println(conn);
 	}
 
 }
