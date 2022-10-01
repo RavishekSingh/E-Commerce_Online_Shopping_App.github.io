@@ -4,12 +4,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
 import com.masai.bean.Buyer;
 import com.masai.bean.Products;
 import com.masai.bean.SellerDTO;
+=======
+
+import com.masai.bean.Buyer;
+>>>>>>> main
 import com.masai.exception.AuctionException;
 import com.masai.utility.DBUtil;
 
@@ -67,6 +72,7 @@ public class BuyerDaoImpl implements BuyerDao {
 		}
 	}
 
+<<<<<<< HEAD
 	@Override
 	public List<Products> viewItemByCategory(String category) throws AuctionException {
 
@@ -165,4 +171,6 @@ public class BuyerDaoImpl implements BuyerDao {
 		return message;
 	}
 
+=======
+>>>>>>> main
 }

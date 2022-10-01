@@ -5,7 +5,10 @@ import java.util.Scanner;
 import com.masai.bean.Seller;
 import com.masai.dao.SellerDao;
 import com.masai.dao.SellerDaoImpl;
+<<<<<<< HEAD
 import com.masai.main.Main;
+=======
+>>>>>>> main
 
 public class RegisterSellerUseCase {
 
@@ -38,9 +41,12 @@ public class RegisterSellerUseCase {
 		System.out.println(result);
 		System.out.println("=========================================");
 		
+<<<<<<< HEAD
 		if(result!=null) {
 			Main.main(args);
 		}
+=======
+>>>>>>> main
 
 	}
 

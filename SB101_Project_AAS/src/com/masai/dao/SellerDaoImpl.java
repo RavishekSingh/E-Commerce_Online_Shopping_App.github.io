@@ -5,7 +5,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+<<<<<<< HEAD
 import com.masai.bean.Products;
+=======
+>>>>>>> main
 import com.masai.bean.Seller;
 import com.masai.exception.AuctionException;
 import com.masai.utility.DBUtil;
@@ -41,7 +44,11 @@ public class SellerDaoImpl implements SellerDao {
 
 	@Override
 	public boolean loginSeller(String name, String password) throws AuctionException {
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> main
 		try (Connection conn = DBUtil.provideConnection()) {
 
 			PreparedStatement ps = conn.prepareStatement("select * from seller where name=? AND password=?");
@@ -52,7 +59,10 @@ public class SellerDaoImpl implements SellerDao {
 			ResultSet rs = ps.executeQuery();
 
 			if (rs.next()) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 				System.out.println("Seller Login Succesfull...");
 				return true;
 			} else {
@@ -66,6 +76,7 @@ public class SellerDaoImpl implements SellerDao {
 		}
 	}
 
+<<<<<<< HEAD
 	@Override
 	public String createProductsList(Products prd) {
 
@@ -166,4 +177,6 @@ public class SellerDaoImpl implements SellerDao {
 		return message;
 	}
 
+=======
+>>>>>>> main
 }
