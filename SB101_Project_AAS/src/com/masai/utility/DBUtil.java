@@ -9,6 +9,10 @@ public class DBUtil {
 <<<<<<< HEAD
 public static Connection provideConnection() {
 		
+=======
+<<<<<<< HEAD
+public static Connection provideConnection() {
+		
 		Connection conn=null;
 		
 		
@@ -26,10 +30,25 @@ public static Connection provideConnection() {
 =======
 
 	public static Connection provideConnection() {
+>>>>>>> main
 		Connection conn=null;
-		String url="jdbc:mysql://localhost:3306/web19sb101_db";
+		
+		
 		try {
+<<<<<<< HEAD
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		String url="jdbc:mysql://localhost:3306/web19_sb101db";
+		
+		try {
+			conn= DriverManager.getConnection(url,"root","ravishek@0578");
+=======
 			conn=DriverManager.getConnection(url, "root", "ravishek@0578");
+>>>>>>> main
 >>>>>>> main
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -40,13 +59,24 @@ public static Connection provideConnection() {
 		
 		
 		
+=======
+<<<<<<< HEAD
+		
+		
+		
 		return conn;
 		
 	}
 	
 =======
+>>>>>>> main
 		return conn;
+		
 	}
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> main
 >>>>>>> main
 }

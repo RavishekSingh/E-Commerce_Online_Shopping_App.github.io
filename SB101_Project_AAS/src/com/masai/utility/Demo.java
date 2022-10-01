@@ -7,6 +7,9 @@ public class Demo {
 	public static void main(String[] args) {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 			Connection conn= DBUtil.provideConnection();
 			
 			
@@ -14,11 +17,15 @@ public class Demo {
 			
 			
 		
+<<<<<<< HEAD
+
+=======
 
 =======
 		Connection conn = DBUtil.provideConnection();
 
 		System.out.println(conn);
+>>>>>>> main
 >>>>>>> main
 	}
 

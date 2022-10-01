@@ -25,6 +25,10 @@ public class GetBuyerDetails {
 		} catch (AuctionException e) {
 			System.out.println(e.getMessage());
 		}
+<<<<<<< HEAD
+		AdminMain.main(args);
+=======
+>>>>>>> main
 	}
 
 }
