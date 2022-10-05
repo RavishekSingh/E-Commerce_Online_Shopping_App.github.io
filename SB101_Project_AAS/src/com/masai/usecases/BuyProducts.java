@@ -16,7 +16,7 @@ public class BuyProducts {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter Product Name:");
-		String pname = sc.next();
+		String pname = sc.nextLine();
 		
 		System.out.println("Enter Buy Quantity:");
 		int qty = sc.nextInt();

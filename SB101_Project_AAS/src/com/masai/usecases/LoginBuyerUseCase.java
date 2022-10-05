@@ -31,6 +31,7 @@ public class LoginBuyerUseCase {
 		} catch (AuctionException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			BuyerMain.main(args);
 		}
 
 	}

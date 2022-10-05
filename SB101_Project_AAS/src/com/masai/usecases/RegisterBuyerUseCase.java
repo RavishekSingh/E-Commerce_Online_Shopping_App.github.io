@@ -5,10 +5,7 @@ import java.util.Scanner;
 import com.masai.bean.Buyer;
 import com.masai.dao.BuyerDao;
 import com.masai.dao.BuyerDaoImpl;
-<<<<<<< HEAD
 import com.masai.main.Main;
-=======
->>>>>>> main
 
 public class RegisterBuyerUseCase {
 
@@ -41,13 +38,9 @@ public class RegisterBuyerUseCase {
 		System.out.println(result);
 		System.out.println("=======================================");
 		
-<<<<<<< HEAD
 		if(result!=null) {
 			Main.main(args);
 		}
-=======
-
->>>>>>> main
 	}
 
 }

@@ -4,17 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
 import com.masai.bean.Buyer;
 import com.masai.bean.Products;
 import com.masai.bean.SellerDTO;
-=======
-
-import com.masai.bean.Buyer;
->>>>>>> main
 import com.masai.exception.AuctionException;
 import com.masai.utility.DBUtil;
 
@@ -72,7 +67,6 @@ public class BuyerDaoImpl implements BuyerDao {
 		}
 	}
 
-<<<<<<< HEAD
 	@Override
 	public List<Products> viewItemByCategory(String category) throws AuctionException {
 
@@ -143,25 +137,32 @@ public class BuyerDaoImpl implements BuyerDao {
 
 		try (Connection conn = DBUtil.provideConnection()) {
 
-			PreparedStatement ps = conn.prepareStatement("select qty=? from products  where pname=?");
+			PreparedStatement ps = conn.prepareStatement("select qty from products where pname=?");
 
-			ps.setInt(1, qty);
-			ps.setString(2, pname);
+			ps.setString(1, pname);
 
 			ResultSet rs = ps.executeQuery();
 
 			if (rs.next()) {
-				int nqty = rs.getInt("qty") - qty;
-				PreparedStatement ps1 = conn.prepareStatement("update products set qty=? where pname=?");
 
-				ps1.setInt(1, nqty);
-				ps1.setString(2, pname);
+				int nqty = rs.getInt("qty");
+				if (nqty < qty)
+					message = "Insufficient Quantity. Available Quantity is "+nqty;
+				else {
 
-				int rs1 = ps1.executeUpdate();
+					nqty = nqty - qty;
+					PreparedStatement ps1 = conn.prepareStatement("update products set qty=? where pname=?");
 
-				if (rs1 > 0) {
-					message = "Product Purchased Succesfully...";
+					ps1.setInt(1, nqty);
+					ps1.setString(2, pname);
+
+					int rs1 = ps1.executeUpdate();
+
+					if (rs1 > 0) {
+						message = "Product " + pname + " Quantity " + qty + " Purchased Succesfully...";
+					}
 				}
+
 			}
 
 		} catch (SQLException se) {
@@ -171,6 +172,4 @@ public class BuyerDaoImpl implements BuyerDao {
 		return message;
 	}
 
-=======
->>>>>>> main
 }
